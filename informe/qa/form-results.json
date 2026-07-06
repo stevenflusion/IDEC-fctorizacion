@@ -1,0 +1,22 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "/contact/",
+    "found": true,
+    "initialValidity": true,
+    "finalValidity": true,
+    "openedUrls": [
+      "https://wa.me/593963160107?text=Nueva%20solicitud%20desde%20la%20web%20IDEC.%0ANombre%20y%20apellido%3A%20QA%20Cliente.%0AEmpresa%20o%20proyecto%3A%20%2B593981371278.%0ACorreo%20electr%C3%B3nico%3A%20qa%40empresa.com.%0ATel%C3%A9fono%3A%20%2B593981371278.%0AServicio%20de%20inter%C3%A9s%3A%20Ingenier%C3%ADa%20civil.%0AMensaje%3A%20Solicitud%20QA%20para%20validar%20el%20formulario."
+    ]
+  },
+  {
+    "viewport": "mobile",
+    "route": "/contact/",
+    "found": true,
+    "initialValidity": true,
+    "finalValidity": true,
+    "openedUrls": [
+      "https://wa.me/593963160107?text=Nueva%20solicitud%20desde%20la%20web%20IDEC.%0ANombre%20y%20apellido%3A%20QA%20Cliente.%0AEmpresa%20o%20proyecto%3A%20%2B593981371278.%0ACorreo%20electr%C3%B3nico%3A%20qa%40empresa.com.%0ATel%C3%A9fono%3A%20%2B593981371278.%0AServicio%20de%20inter%C3%A9s%3A%20Ingenier%C3%ADa%20civil.%0AMensaje%3A%20Solicitud%20QA%20para%20validar%20el%20formulario."
+    ]
+  }
+]

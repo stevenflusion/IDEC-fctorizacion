@@ -1,0 +1,58 @@
+[
+  {
+    "url": "http://127.0.0.1:5002/",
+    "text": "IDECSoluciones integrales",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:5002/"
+  },
+  {
+    "url": "http://127.0.0.1:5002/clients",
+    "text": "Proyectos",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:5002/clients"
+  },
+  {
+    "url": "http://127.0.0.1:5002/contact",
+    "text": "Contacto",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:5002/contact"
+  },
+  {
+    "url": "http://127.0.0.1:5002/sobre-nosotros",
+    "text": "Sobre nosotros",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:5002/sobre-nosotros"
+  },
+  {
+    "url": "http://127.0.0.1:5002/galery",
+    "text": "Galeria",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:5002/galery"
+  },
+  {
+    "url": "http://127.0.0.1:5002/sobre-nosotros/",
+    "text": "Conocer IDEC",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:5002/sobre-nosotros/"
+  },
+  {
+    "url": "http://127.0.0.1:5002/soluciones",
+    "text": "Telecomunicaciones",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:5002/soluciones"
+  },
+  {
+    "url": "http://127.0.0.1:5002/soluciones/",
+    "text": "Solicitar una propuesta→",
+    "status": 200,
+    "ok": true,
+    "finalUrl": "http://127.0.0.1:5002/soluciones/"
+  }
+]

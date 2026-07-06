@@ -1,0 +1,448 @@
+[
+  {
+    "type": "fullpage",
+    "route": "/",
+    "viewport": "desktop",
+    "file": "informe\\capturas-web\\inicio-desktop-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/",
+    "viewport": "desktop",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\inicio-desktop-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/",
+    "viewport": "desktop",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\inicio-desktop-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/",
+    "viewport": "desktop",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\inicio-desktop-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/home/",
+    "viewport": "desktop",
+    "file": "informe\\capturas-web\\home-desktop-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/home/",
+    "viewport": "desktop",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\home-desktop-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/home/",
+    "viewport": "desktop",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\home-desktop-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/home/",
+    "viewport": "desktop",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\home-desktop-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/soluciones/",
+    "viewport": "desktop",
+    "file": "informe\\capturas-web\\soluciones-desktop-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/soluciones/",
+    "viewport": "desktop",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\soluciones-desktop-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/soluciones/",
+    "viewport": "desktop",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\soluciones-desktop-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/soluciones/",
+    "viewport": "desktop",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\soluciones-desktop-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/sobre-nosotros/",
+    "viewport": "desktop",
+    "file": "informe\\capturas-web\\sobre-nosotros-desktop-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/sobre-nosotros/",
+    "viewport": "desktop",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\sobre-nosotros-desktop-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/sobre-nosotros/",
+    "viewport": "desktop",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\sobre-nosotros-desktop-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/sobre-nosotros/",
+    "viewport": "desktop",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\sobre-nosotros-desktop-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/clients/",
+    "viewport": "desktop",
+    "file": "informe\\capturas-web\\clients-desktop-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/clients/",
+    "viewport": "desktop",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\clients-desktop-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/clients/",
+    "viewport": "desktop",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\clients-desktop-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/clients/",
+    "viewport": "desktop",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\clients-desktop-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/contact/",
+    "viewport": "desktop",
+    "file": "informe\\capturas-web\\contacto-desktop-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/contact/",
+    "viewport": "desktop",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\contacto-desktop-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/contact/",
+    "viewport": "desktop",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\contacto-desktop-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/contact/",
+    "viewport": "desktop",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\contacto-desktop-footer.png"
+  },
+  {
+    "type": "component",
+    "component": "contact-form",
+    "route": "/contact/",
+    "viewport": "desktop",
+    "file": "informe\\capturas-web\\componentes\\contacto-desktop-formulario-contacto.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/",
+    "viewport": "mobile",
+    "file": "informe\\capturas-web\\inicio-mobile-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/",
+    "viewport": "mobile",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\inicio-mobile-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/",
+    "viewport": "mobile",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\inicio-mobile-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/",
+    "viewport": "mobile",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\inicio-mobile-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/home/",
+    "viewport": "mobile",
+    "file": "informe\\capturas-web\\home-mobile-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/home/",
+    "viewport": "mobile",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\home-mobile-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/home/",
+    "viewport": "mobile",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\home-mobile-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/home/",
+    "viewport": "mobile",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\home-mobile-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/soluciones/",
+    "viewport": "mobile",
+    "file": "informe\\capturas-web\\soluciones-mobile-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/soluciones/",
+    "viewport": "mobile",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\soluciones-mobile-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/soluciones/",
+    "viewport": "mobile",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\soluciones-mobile-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/soluciones/",
+    "viewport": "mobile",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\soluciones-mobile-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/sobre-nosotros/",
+    "viewport": "mobile",
+    "file": "informe\\capturas-web\\sobre-nosotros-mobile-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/sobre-nosotros/",
+    "viewport": "mobile",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\sobre-nosotros-mobile-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/sobre-nosotros/",
+    "viewport": "mobile",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\sobre-nosotros-mobile-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/sobre-nosotros/",
+    "viewport": "mobile",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\sobre-nosotros-mobile-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/clients/",
+    "viewport": "mobile",
+    "file": "informe\\capturas-web\\clients-mobile-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/clients/",
+    "viewport": "mobile",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\clients-mobile-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/clients/",
+    "viewport": "mobile",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\clients-mobile-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/clients/",
+    "viewport": "mobile",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\clients-mobile-footer.png"
+  },
+  {
+    "type": "fullpage",
+    "route": "/contact/",
+    "viewport": "mobile",
+    "file": "informe\\capturas-web\\contacto-mobile-fullpage.png"
+  },
+  {
+    "type": "section",
+    "route": "/contact/",
+    "viewport": "mobile",
+    "section": "hero",
+    "file": "informe\\capturas-web\\secciones\\contacto-mobile-hero.png"
+  },
+  {
+    "type": "section",
+    "route": "/contact/",
+    "viewport": "mobile",
+    "section": "medio",
+    "file": "informe\\capturas-web\\secciones\\contacto-mobile-medio.png"
+  },
+  {
+    "type": "section",
+    "route": "/contact/",
+    "viewport": "mobile",
+    "section": "footer",
+    "file": "informe\\capturas-web\\secciones\\contacto-mobile-footer.png"
+  },
+  {
+    "type": "component",
+    "component": "contact-form",
+    "route": "/contact/",
+    "viewport": "mobile",
+    "file": "informe\\capturas-web\\componentes\\contacto-mobile-formulario-contacto.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "00",
+    "name": "launcher-cerrado",
+    "file": "informe\\capturas-chatbot\\desktop\\00-launcher-cerrado.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "01",
+    "name": "bienvenida-opciones",
+    "file": "informe\\capturas-chatbot\\desktop\\01-bienvenida-opciones.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "02",
+    "name": "estado-cargando",
+    "file": "informe\\capturas-chatbot\\desktop\\02-estado-cargando.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "03",
+    "name": "respuesta-servicios",
+    "file": "informe\\capturas-chatbot\\desktop\\03-respuesta-servicios.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "04",
+    "name": "respuesta-faq-proceso",
+    "file": "informe\\capturas-chatbot\\desktop\\04-respuesta-faq-proceso.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "05",
+    "name": "respuesta-contacto",
+    "file": "informe\\capturas-chatbot\\desktop\\05-respuesta-contacto.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "06",
+    "name": "respuesta-fallback",
+    "file": "informe\\capturas-chatbot\\desktop\\06-respuesta-fallback.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "07",
+    "name": "whatsapp-redireccion",
+    "file": "informe\\capturas-chatbot\\desktop\\07-whatsapp-redireccion.png"
+  },
+  {
+    "viewport": "mobile",
+    "step": "00",
+    "name": "launcher-cerrado",
+    "file": "informe\\capturas-chatbot\\mobile\\00-launcher-cerrado.png"
+  },
+  {
+    "viewport": "mobile",
+    "step": "01",
+    "name": "bienvenida-opciones",
+    "file": "informe\\capturas-chatbot\\mobile\\01-bienvenida-opciones.png"
+  },
+  {
+    "viewport": "mobile",
+    "step": "02",
+    "name": "estado-cargando",
+    "file": "informe\\capturas-chatbot\\mobile\\02-estado-cargando.png"
+  },
+  {
+    "viewport": "mobile",
+    "step": "03",
+    "name": "respuesta-servicios",
+    "file": "informe\\capturas-chatbot\\mobile\\03-respuesta-servicios.png"
+  },
+  {
+    "viewport": "mobile",
+    "step": "04",
+    "name": "respuesta-faq-proceso",
+    "file": "informe\\capturas-chatbot\\mobile\\04-respuesta-faq-proceso.png"
+  },
+  {
+    "viewport": "mobile",
+    "step": "05",
+    "name": "respuesta-contacto",
+    "file": "informe\\capturas-chatbot\\mobile\\05-respuesta-contacto.png"
+  },
+  {
+    "viewport": "mobile",
+    "step": "06",
+    "name": "respuesta-fallback",
+    "file": "informe\\capturas-chatbot\\mobile\\06-respuesta-fallback.png"
+  },
+  {
+    "viewport": "mobile",
+    "step": "07",
+    "name": "whatsapp-redireccion",
+    "file": "informe\\capturas-chatbot\\mobile\\07-whatsapp-redireccion.png"
+  },
+  {
+    "viewport": "desktop",
+    "step": "08",
+    "name": "error-api",
+    "file": "informe\\capturas-chatbot\\desktop\\08-error-api.png"
+  },
+  {
+    "type": "static-smoke",
+    "route": "static-build",
+    "viewport": "desktop",
+    "file": "informe\\capturas-chatbot\\desktop\\09-static-build-smoke.png"
+  }
+]

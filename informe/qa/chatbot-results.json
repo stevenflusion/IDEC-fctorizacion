@@ -1,0 +1,77 @@
+{
+  "api": [
+    {
+      "id": "saludo",
+      "status": 200,
+      "ok": true,
+      "intent": "greeting",
+      "hasReply": true,
+      "suggestions": [
+        "Soluciones de ingeniería",
+        "Diagnóstico técnico",
+        "Hablar con un especialista"
+      ]
+    },
+    {
+      "id": "servicios",
+      "status": 200,
+      "ok": true,
+      "intent": "electrical_engineering",
+      "hasReply": true,
+      "suggestions": [
+        "Diagnóstico técnico",
+        "Proceso de trabajo",
+        "Cotizar proyecto"
+      ]
+    },
+    {
+      "id": "contacto",
+      "status": 200,
+      "ok": true,
+      "intent": "human_agent",
+      "hasReply": true,
+      "suggestions": [
+        "Horario de atención",
+        "Qué información debo enviar"
+      ]
+    },
+    {
+      "id": "fallback",
+      "status": 200,
+      "ok": true,
+      "intent": "fallback",
+      "hasReply": true,
+      "suggestions": [
+        "Soluciones de ingeniería",
+        "Diagnóstico técnico",
+        "Hablar con un especialista"
+      ]
+    }
+  ],
+  "visual": [
+    {
+      "viewport": "desktop",
+      "route": "/home/",
+      "consoleErrors": [],
+      "whatsappHref": "https://wa.me/593963160107?text=Hola%20IDEC%2C%20quiero%20continuar%20mi%20consulta%20con%20un%20especialista.%20Necesito%20apoyo%20para%20revisar%20un%20proyecto%20t%C3%A9cnico.",
+      "messagesTested": [
+        "servicios",
+        "faq-proceso",
+        "contacto",
+        "fallback"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "route": "/home/",
+      "consoleErrors": [],
+      "whatsappHref": "https://wa.me/593963160107?text=Hola%20IDEC%2C%20quiero%20continuar%20mi%20consulta%20con%20un%20especialista.%20Necesito%20apoyo%20para%20revisar%20un%20proyecto%20t%C3%A9cnico.",
+      "messagesTested": [
+        "servicios",
+        "faq-proceso",
+        "contacto",
+        "fallback"
+      ]
+    }
+  ]
+}

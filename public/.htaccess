@@ -1,0 +1,8 @@
+DirectoryIndex index.html
+Options -MultiViews
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+RewriteCond %{DOCUMENT_ROOT}/$1/index.txt -f
+RewriteRule ^(.+)\.txt$ $1/index.txt [L]
