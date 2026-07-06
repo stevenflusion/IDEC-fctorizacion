@@ -482,9 +482,9 @@ html[data-site-theme="dark"] .theme-footer-social {
   animation: marquee 40s linear infinite;
 }
 
-.animate-marquee:hover {
+/* .animate-marquee:hover {
   animation-play-state: paused;
-}
+} */
 
 /* Range inputs styling */
 input[type="range"] {

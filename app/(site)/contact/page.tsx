@@ -73,7 +73,7 @@ export default function ContactPage() {
             tone="light"
           />
 
-          <div className="mt-2 grid gap-7 xl:grid-cols-[minmax(0,0.72fr)_minmax(420px,0.98fr)] xl:items-start">
+          <div className="mt-2">
             {/* Info cards */}
             <div className="rounded-3xl flex items-center justify-between p-6 border shadow">
               <div className="">
@@ -143,10 +143,6 @@ export default function ContactPage() {
                 Si necesitás un aliado técnico, conversemos con claridad desde
                 el principio.
               </h2>
-              <p className="relative text-gray-500 z-10 mt-3 max-w-[32rem] leading-6 ">
-                Te ayudamos a leer alcance, prioridades y dependencias antes de
-                comprometer inversión y tiempo.
-              </p>
             </div>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link

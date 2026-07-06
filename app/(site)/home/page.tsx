@@ -15,7 +15,7 @@ const softwareShowcase = [
   {
     name: "IDEC Asiste",
     description:
-      "Seguimiento de avances, fotos y pendientes desde una sola vista.",
+      "Gestiona proyectos, supervisa avances y controla equipos desde una plataforma centralizada.",
     metric: "12 FRENTES EN TIEMPO REAL",
     image:
       "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80",
@@ -24,15 +24,16 @@ const softwareShowcase = [
   {
     name: "IDEC Conecta",
     description:
-      "Redes, IoT y conectividad centralizadas en un panel operativo.",
+      "Integra cámaras, sensores, dispositivos IoT y sistemas inteligentes para tener control en tiempo real.",
     metric: "800+ DISPOSITIVOS GESTIONADOS",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
     cta: "Conocer plataforma",
   },
   {
-    name: "Flujo comercial",
-    description: "Ventas, inventario y analítica para decisiones más rápidas.",
+    name: "IDEC Flujo comercial",
+    description:
+      "Centraliza ventas, clientes, inventarios y reportes para tomar mejores decisiones comerciales.",
     metric: "+18% TICKET PROMEDIO",
     image:
       "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=900&q=80",
@@ -148,6 +149,31 @@ const impactMetrics = [
     label: "AUTOMATIZACIONES CON IA - GITHUB",
     detail: "Procesos, datos y asistentes inteligentes.",
   },
+  {
+    value: "80+",
+    label: "REGLAS DE NEGOCIO IMPLEMENTADAS",
+    detail: "Validaciones, flujos y restricciones operativas.",
+  },
+  {
+    value: "45",
+    label: "PROCESOS AUTOMATIZADOS",
+    detail: "Flujos de trabajo sin intervención manual.",
+  },
+  {
+    value: "20+",
+    label: "INTEGRACIONES ENTRE SISTEMAS",
+    detail: "APIs, webhooks y conectores de datos.",
+  },
+  {
+    value: "35",
+    label: "FLUJOS DE APROBACIÓN",
+    detail: "Circuitos de autorización y gobierno.",
+  },
+  {
+    value: "120+",
+    label: "ALERTAS OPERATIVAS",
+    detail: "Notificaciones inteligentes en tiempo real.",
+  },
 ];
 
 export default function HomePage() {
@@ -215,7 +241,7 @@ export default function HomePage() {
           {[...impactMetrics, ...impactMetrics].map((metric, i) => (
             <article
               key={`${metric.label}-${i}`}
-              className="group h-[24dvh] w-[380px] shrink-0 relative flex flex-col overflow-hidden rounded-[1.15rem] border border-gray-200 bg-white transition-all duration-300 hover:border-blue-400/20 hover:shadow-md sm:p-5 xl:p-4"
+              className="group h-[24dvh] w-[250px] shrink-0 relative flex flex-col overflow-hidden rounded-[1.15rem] border border-gray-200 bg-white transition-all duration-300 hover:border-blue-400/20 hover:shadow-md sm:p-5 xl:p-4"
             >
               <span className="font-display text-base font-extrabold">
                 {metric.value}
@@ -266,7 +292,6 @@ export default function HomePage() {
 
               <div className="flex flex-1 flex-col p-6">
                 <h2 className="font-display mt-5  text-4xl font-extrabold leading-[0.98] tracking-[-0.04em] text-[#081120]">
-                  Plataformas para operar con más control
                   {app.name}
                 </h2>
                 <p className="mt-4 max-w-[39rem] text-[0.98rem] leading-7 text-slate-600 sm:text-[1.04rem]">
@@ -289,11 +314,11 @@ export default function HomePage() {
       <section className="flex flex-col items-center justify-center px-16 pt-20">
         <div className="relative mx-auto w-full max-w-[1520px]">
           <h2 className="font-display mt-5 max-w-[14ch] text-[clamp(2.1rem,3.8vw,3.55rem)] font-extrabold leading-[0.98] tracking-[-0.04em] text-[#081120]">
-            Plataformas para operar con más control
+            Operaciones con practicas y arquitecturas profesionales
           </h2>
           <p className="mt-4 max-w-[39rem] text-[0.98rem] leading-7 text-slate-600 sm:text-[1.04rem]">
-            Herramientas desarrolladas para centralizar datos, automatizar
-            procesos y mejorar la toma de decisiones.
+            Seguimiento de arquitecturas, estrategias, patrones y diseños que
+            favorecen al usuario final.
           </p>
         </div>
       </section>
@@ -340,8 +365,8 @@ export default function HomePage() {
               Una metodología clara de principio a fin
             </h2>
             <p className="mt-4 max-w-[39rem] text-[0.98rem] leading-7 text-slate-600 sm:text-[1.04rem]">
-              Reducimos incertidumbre con etapas visibles, responsables claros y
-              validación continua.
+              Aplicación de practicas metodologicas que guían a nuestros
+              clientes a cumplir la misión de su empresa.
             </p>
           </div>
 

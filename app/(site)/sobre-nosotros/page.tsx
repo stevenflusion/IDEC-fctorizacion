@@ -152,17 +152,17 @@ export default function AboutPage() {
         <div className="z-10 absolute top-1/4 left-16 w-[420px] h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[100px] opacity-20 pointer-events-none animate-float" />
 
         <h1 className="relative z-10 mt-4 max-w-[13.5ch] break-words text-[2.15rem] font-extrabold leading-[0.98] tracking-normal sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[4rem]">
-          Ingeniería, automatización e inteligencia artificial para operaciones
-          críticas.
+          Obras reales con criterio técnico y ejecución en campo.
         </h1>
         <p className="relative z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6  sm:text-[1rem]">
-          Integramos trabajos de automatización con inteligencia artificial,
-          infraestructura, energía y conectividad.
+          Seleccionamos proyectos recientes que muestran cómo IDEC coordina
+          ingeniería civil, eléctrica y soporte técnico para resolver
+          necesidades concretas con seguridad, orden y continuidad operativa.
         </p>
         <div className="relative z-10 mt-4 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
           <Link
             href="/soluciones#soluciones-principales"
-            className="bg-white flex gap-2 items-center py-3 w-full px-5 text-sm  sm:w-auto"
+            className="bg-white flex items-center gap-2 rounded-3xl py-3 w-full px-5 text-sm  sm:w-auto"
           >
             Conocer IDEC
             <svg
@@ -171,7 +171,7 @@ export default function AboutPage() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-5"
+              className="size-6"
             >
               <path
                 strokeLinecap="round"
@@ -182,9 +182,9 @@ export default function AboutPage() {
           </Link>
           <Link
             href="/contact"
-            className="bg-white py-2 w-full px-4 text-sm sm:w-auto"
+            className="border border-gray-400 shadow rounded-3xl py-2 w-full px-4 text-sm sm:w-auto"
           >
-            Explorar soluciones
+            Ver soluciones
           </Link>
         </div>
         <div className="relative z-10 mt-4 flex flex-wrap gap-2">
@@ -377,7 +377,7 @@ export default function AboutPage() {
           <SectionHeader
             badge="Experiencia IDEC"
             title="Relaciones que se sostienen por claridad y resultados."
-            description="Nuestro trabajo no termina en la ejecución: acompañamos decisiones y continuidad para que el cliente gane confianza en cada fase."
+            description=""
             tone="light"
           />
           <div className="grid gap-5 md:grid-cols-2">

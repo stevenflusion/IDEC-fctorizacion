@@ -81,9 +81,9 @@ const complementaryLayers = [
     title: "Workflows con IA",
     metric: "DATOS EN UNA SOLA CAPA",
     description:
-      "Plataformas e integraciones que ordenan decisiones, procesos y reportería.",
+      "Los workflows con IA son la nueva manera de resolver problemas en las empresas. ",
     image:
-      "https://images.unsplash.com/photo-1603969280040-3bbb77278211?auto=format&fit=crop&w=1200&q=80",
+      "https://plus.unsplash.com/premium_photo-1680608979589-e9349ed066d5?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     icon: IconArrowRight,
   },
 ];
@@ -207,7 +207,7 @@ export default function SolutionsPage() {
           <SectionHeader
             badge="Núcleo técnico"
             title="Tres capacidades para proyectos que no pueden improvisarse."
-            description="Construimos la base física y operativa de cada despliegue con especialidades que se coordinan como un solo sistema."
+            description=""
             tone="light"
           />
           <div className="grid gap-5 xl:grid-cols-3">
@@ -295,7 +295,7 @@ export default function SolutionsPage() {
         <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
           <SectionHeader
             badge="Modelo de trabajo"
-            title="Una metodología clara para reducir fricción y tomar mejores decisiones."
+            title="Una metodología clara para reducir tiempos de entrega y tomar mejores decisiones."
             description="Coordinamos alcance, especialidades y validación continua para que la ejecución avance con control desde el primer día."
             tone="light"
           />
