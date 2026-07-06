@@ -8,6 +8,7 @@ const quickLinks = [
   { href: "/sobre-nosotros", label: "Sobre nosotros" },
   { href: "/contact", label: "Contacto" },
   { href: "/galery", label: "Galeria" },
+  { href: "/politica-privacidad", label: "Política de privacidad" },
 ];
 
 const solutionLinks = [
