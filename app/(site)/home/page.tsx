@@ -212,18 +212,18 @@ export default function HomePage() {
         {/* Nube brillante celeste */}
         <div className="z-10 absolute top-1/4 left-4 sm:left-16 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[80px] sm:blur-[100px] opacity-20 pointer-events-none animate-float" />
 
-        <h1 className="theme-heading text-center lg:text-start relative z-10 mt-32 md:mt20 lg:mt-4 text-4xl font-extrabold leading-[1.02] tracking-normal sm:max-w-[20ch] sm:text-[2.5rem] lg:text-[3.45rem] xl:text-[4rem]">
+        <h1 className="theme-heading text-center lg:text-start relative z-10 mt-32 sm:mt-28 md:mt-20 lg:mt-4 text-4xl font-extrabold leading-[1.02] tracking-normal sm:max-w-[20ch] sm:text-[2rem] md:text-[2.5rem] lg:text-[3.45rem] xl:text-[4rem]">
           Ingeniería, automatización e inteligencia artificial para operaciones
           críticas.
         </h1>
-        <p className="theme-copy relative px-4 pb-20 md:pb-0 md:text-start text-center z-10 md:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
+        <p className="theme-copy relative px-4 pb-20 sm:pb-8 md:pb-0 md:text-start text-center z-10 md:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[0.7rem] md:text-[1rem]">
           Integramos trabajos de automatización con inteligencia artificial,
           infraestructura, energía y conectividad.
         </p>
-        <div className="relative z-10 md:pb-0 md:mt-4 mt-32 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center w-full sm:w-auto">
+        <div className="relative z-10 sm:pb-0 md:pb-0 md:mt-4 mt-32 sm:mt-0 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center w-full sm:w-auto">
           <Link
             href="/soluciones#soluciones-principales"
-            className="bg-blue-500 text-white flex items-center justify-center gap-2 rounded-3xl py-3 w-full px-5 text-sm sm:w-auto"
+            className="bg-blue-500 text-white flex items-center justify-center gap-2 rounded-3xl py-3 sm:py-2 md:py-3 w-full px-5 text-sm sm:text-xs md:text-sm sm:w-auto"
           >
             Explorar soluciones
             <svg
@@ -243,12 +243,12 @@ export default function HomePage() {
           </Link>
           <Link
             href="/contact"
-            className="bg-white text-slate-700 border border-slate-300 flex items-center justify-center rounded-3xl py-2.5 w-full px-4 text-sm sm:w-auto text-center"
+            className="bg-white text-slate-700 border border-slate-300 flex items-center justify-center rounded-3xl sm:py-2 md:py-2.5 py-2.5 w-full px-4 text-sm sm:text-xs md:text-sm  sm:w-auto text-center"
           >
             Hablar con un asesor
           </Link>
         </div>
-        <div className="relative z-10 md:mt-4 flex md:gap-0 gap-2">
+        <div className="relative z-10 sm:mt-0 md:mt-4 flex md:gap-2 gap-2">
           {capabilitySignals.map((signal) => (
             <span
               key={signal}
@@ -261,7 +261,7 @@ export default function HomePage() {
       </section>
 
       {/* ===================== MARQUEE ===================== */}
-      <div className="mt-10 md:mt-12 lg:mt-20 w-full h-[25dvh] md:h-[40dvh] overflow-hidden">
+      <div className="mt-10 md:mt-12 lg:mt-20 w-full h-[25dvh] sm:h-[48dvh] md:h-[40dvh] overflow-hidden">
         <div
           className="flex gap-6 animate-marquee"
           style={{ width: "fit-content" }}
@@ -269,7 +269,7 @@ export default function HomePage() {
           {[...impactMetrics, ...impactMetrics].map((metric, i) => (
             <article
               key={`${metric.label}-${i}`}
-              className="theme-card group h-[24dvh] w-[250px] md:h-[40dvh] md:w-[300px] lg:h-[25dvh]  shrink-0 relative flex flex-col overflow-hidden rounded-[1.15rem] border transition-all duration-300 hover:border-blue-400/20 hover:shadow-md p-4 sm:p-5 xl:p-4"
+              className="theme-card group h-[24dvh] w-[250px] sm:h-[43dvh] md:h-[40dvh] md:w-[300px] lg:h-[25dvh]  shrink-0 relative flex flex-col overflow-hidden rounded-[1.15rem] border transition-all duration-300 hover:border-blue-400/20 hover:shadow-md p-4 sm:p-5 xl:p-4"
             >
               <span className="theme-heading font-display text-base font-extrabold">
                 {metric.value}
@@ -286,7 +286,7 @@ export default function HomePage() {
       </div>
 
       {/* ===================== PLATAFORMAS ===================== */}
-      <section className="relative px-4 sm:px-6 lg:px-16 w-full pt-16 md:pt-16 lg:pt-4">
+      <section className="relative px-4 sm:px-6 lg:px-16 w-full pt-16 sm:mt-0 md:pt-16 lg:pt-4">
         <div className="relative mx-auto w-full max-w-[1520px]">
           <h2 className="theme-heading font-display mt-5 max-w-[14ch] text-[clamp(2.1rem,5vw,3.55rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">
             Plataformas para operar con más control

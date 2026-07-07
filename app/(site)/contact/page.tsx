@@ -68,15 +68,15 @@ export default function ContactPage() {
         {/* Nube brillante celeste */}
         <div className="z-10 absolute top-1/4 left-4 sm:left-16 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[80px] sm:blur-[100px] opacity-20 pointer-events-none animate-float" />
 
-        <h1 className="theme-heading text-center lg:text-start relative z-10 mt-32 md:mt-20 lg:mt-4 max-w-[13.5ch] break-words text-4xl font-extrabold leading-[1.02] tracking-normal sm:max-w-[20ch] sm:text-[2.5rem] lg:text-[3.45rem] xl:text-[4rem]">
+        <h1 className="theme-heading text-center lg:text-start relative z-10 mt-32 sm:mt-28 md:mt-20 lg:mt-4 max-w-[13.5ch] break-words text-4xl font-extrabold leading-[1.02] tracking-normal sm:max-w-[20ch] sm:text-[2rem] md:text-[2.5rem] lg:text-[3.45rem] xl:text-[4rem]">
           Hablemos de tu proyecto
         </h1>
-        <p className="theme-copy relative px-4 pb-20 md:pb-0 md:text-start text-center z-10 md:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
+        <p className="theme-copy relative px-4 pb-20 sm:pb-8 md:pb-0 md:text-start text-center z-10 md:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[0.7rem] md:text-[1rem]">
           Cuéntanos qué necesitas y coordinamos el siguiente paso con claridad
           técnica y respuesta directa.
         </p>
 
-        <div className="relative z-10 md:mt-4 mt-32 flex flex-col items-center md:items-start sm:grid sm:grid-cols-3 gap-2 w-full sm:w-auto sm:items-stretch">
+        <div className="relative z-10 sm:mt-0 md:mt-4 mt-32 flex flex-col items-center md:items-start sm:grid sm:grid-cols-3 gap-2 w-full sm:w-auto sm:items-stretch">
           {capabilitySignals.map((signal) => (
             <span
               key={signal}
