@@ -38,7 +38,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* ===================== HERO ===================== */}
-      <section className="relative flex flex-col gap-2 xl:gap-2 items-center xl:items-start justify-center px-4 sm:px-6 lg:px-16 w-full h-dvh overflow-hidden">
+      <section className="relative flex flex-col gap-2 lg:gap-2 items-center lg:items-start justify-center px-4 sm:px-6 lg:px-16 w-full h-dvh overflow-hidden">
         <picture className="absolute inset-0 -z-0 theme-hero-media">
           <source
             media="(max-width: 639px)"
@@ -68,19 +68,19 @@ export default function ContactPage() {
         {/* Nube brillante celeste */}
         <div className="z-10 absolute top-1/4 left-4 sm:left-16 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[80px] sm:blur-[100px] opacity-20 pointer-events-none animate-float" />
 
-        <h1 className="theme-heading relative z-10 mt-28 xl:mt-4 text-center xl:text-start max-w-[13.5ch] break-words text-4xl font-extrabold leading-[1.02] tracking-normal xs:text-[2.4rem] sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[4rem]">
+        <h1 className="theme-heading text-center lg:text-start relative z-10 mt-32 md:mt-20 lg:mt-4 max-w-[13.5ch] break-words text-4xl font-extrabold leading-[1.02] tracking-normal sm:max-w-[20ch] sm:text-[2.5rem] lg:text-[3.45rem] xl:text-[4rem]">
           Hablemos de tu proyecto
         </h1>
-        <p className="theme-copy relative px-4 pb-32 xl:pb-0 text-center xl:text-start z-10 xl:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
+        <p className="theme-copy relative px-4 pb-20 md:pb-0 md:text-start text-center z-10 md:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
           Cuéntanos qué necesitas y coordinamos el siguiente paso con claridad
           técnica y respuesta directa.
         </p>
 
-        <div className="relative z-10 xl:mt-4 mt-80 flex xl:flex-col items-center justify-center xl:items-start sm:grid sm:grid-cols-3 gap-2 w-full sm:w-auto sm:items-stretch">
+        <div className="relative z-10 md:mt-4 mt-32 flex flex-col items-center md:items-start sm:grid sm:grid-cols-3 gap-2 w-full sm:w-auto sm:items-stretch">
           {capabilitySignals.map((signal) => (
             <span
               key={signal}
-              className="theme-pill flex items-center justify-center rounded-full border backdrop-blur-sm px-3 py-1.5 text-center text-[0.48rem] xl:text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em]"
+              className="theme-pill flex items-center justify-center rounded-full border backdrop-blur-sm px-3 py-1.5 text-center md:text-[0.58rem] text-[0.48rem] font-medium uppercase leading-4 tracking-[0.08em]"
             >
               {signal}
             </span>

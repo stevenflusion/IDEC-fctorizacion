@@ -48,7 +48,7 @@ export default function MainNavSite() {
     )?.[1] ?? [];
 
   return (
-    <header className="theme-nav fixed inset-x-0 top-0 z-50 w-full">
+    <header className="theme-nav absolute inset-x-0 top-0 z-50 w-full">
       <div className="mx-auto flex h-[var(--navbar-height)] max-w-[90rem] items-center justify-between gap-3 px-4 sm:px-6 lg:gap-5 lg:px-8">
         <div className="flex min-w-0 items-center gap-3">
           <Logo />

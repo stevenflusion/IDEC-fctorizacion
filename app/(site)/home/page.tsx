@@ -182,7 +182,7 @@ export default function HomePage() {
   return (
     <>
       {/* ===================== HERO ===================== */}
-      <section className="relative flex flex-col gap-4 xl:gap-2 items-center xl:items-start justify-center px-4 sm:px-6 lg:px-16 w-full h-dvh overflow-hidden">
+      <section className="relative flex flex-col gap-4 lg:gap-2 items-center lg:items-start justify-center px-4 sm:px-6 lg:px-16 w-full h-dvh overflow-hidden">
         <picture className="absolute inset-0 -z-0 theme-hero-media">
           <source
             media="(max-width: 639px)"
@@ -212,15 +212,15 @@ export default function HomePage() {
         {/* Nube brillante celeste */}
         <div className="z-10 absolute top-1/4 left-4 sm:left-16 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[80px] sm:blur-[100px] opacity-20 pointer-events-none animate-float" />
 
-        <h1 className="theme-heading relative z-10 mt-32 xl:mt-4 text-center xl:text-start text-4xl font-extrabold leading-[1.02] tracking-normal xs:text-[2.4rem] sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[4rem]">
+        <h1 className="theme-heading text-center lg:text-start relative z-10 mt-32 md:mt20 lg:mt-4 text-4xl font-extrabold leading-[1.02] tracking-normal sm:max-w-[20ch] sm:text-[2.5rem] lg:text-[3.45rem] xl:text-[4rem]">
           Ingeniería, automatización e inteligencia artificial para operaciones
           críticas.
         </h1>
-        <p className="theme-copy relative px-4 pb-20 xl:pb-0 xl:text-start text-center z-10 xl:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
+        <p className="theme-copy relative px-4 pb-20 md:pb-0 md:text-start text-center z-10 md:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
           Integramos trabajos de automatización con inteligencia artificial,
           infraestructura, energía y conectividad.
         </p>
-        <div className="relative z-10 xl:pb-0 xl:mt-4 mt-32 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center w-full sm:w-auto">
+        <div className="relative z-10 md:pb-0 md:mt-4 mt-32 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center w-full sm:w-auto">
           <Link
             href="/soluciones#soluciones-principales"
             className="bg-blue-500 text-white flex items-center justify-center gap-2 rounded-3xl py-3 w-full px-5 text-sm sm:w-auto"
@@ -248,11 +248,11 @@ export default function HomePage() {
             Hablar con un asesor
           </Link>
         </div>
-        <div className="relative z-10 xl:mt-4 flex xl:gap-0 gap-2">
+        <div className="relative z-10 md:mt-4 flex md:gap-0 gap-2">
           {capabilitySignals.map((signal) => (
             <span
               key={signal}
-              className="theme-pill flex items-center rounded-full px-1 py-1 xl:px-2.5 xl:py-1.5 text-center text-[0.48rem] xl:text-[0.58rem]  font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em] backdrop-blur-sm"
+              className="theme-pill flex items-center rounded-full px-1 py-1 md:px-2.5 md:py-1.5 text-center text-[0.48rem] md:text-[0.58rem]  font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em] backdrop-blur-sm"
             >
               {signal}
             </span>
@@ -261,7 +261,7 @@ export default function HomePage() {
       </section>
 
       {/* ===================== MARQUEE ===================== */}
-      <div className="mt-5 lg:mt-16 w-full h-[25dvh] overflow-hidden">
+      <div className="mt-10 md:mt-12 lg:mt-20 w-full h-[25dvh] md:h-[40dvh] overflow-hidden">
         <div
           className="flex gap-6 animate-marquee"
           style={{ width: "fit-content" }}
@@ -269,7 +269,7 @@ export default function HomePage() {
           {[...impactMetrics, ...impactMetrics].map((metric, i) => (
             <article
               key={`${metric.label}-${i}`}
-              className="theme-card group h-[24dvh] w-[250px] shrink-0 relative flex flex-col overflow-hidden rounded-[1.15rem] border transition-all duration-300 hover:border-blue-400/20 hover:shadow-md p-4 sm:p-5 xl:p-4"
+              className="theme-card group h-[24dvh] w-[250px] md:h-[40dvh] md:w-[300px] lg:h-[25dvh]  shrink-0 relative flex flex-col overflow-hidden rounded-[1.15rem] border transition-all duration-300 hover:border-blue-400/20 hover:shadow-md p-4 sm:p-5 xl:p-4"
             >
               <span className="theme-heading font-display text-base font-extrabold">
                 {metric.value}
@@ -286,7 +286,7 @@ export default function HomePage() {
       </div>
 
       {/* ===================== PLATAFORMAS ===================== */}
-      <section className="relative px-4 sm:px-6 lg:px-16 w-full pt-16 sm:pt-20">
+      <section className="relative px-4 sm:px-6 lg:px-16 w-full pt-16 md:pt-16 lg:pt-4">
         <div className="relative mx-auto w-full max-w-[1520px]">
           <h2 className="theme-heading font-display mt-5 max-w-[14ch] text-[clamp(2.1rem,5vw,3.55rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">
             Plataformas para operar con más control

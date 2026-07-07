@@ -148,7 +148,7 @@ export default function SolutionsPage() {
   return (
     <div className="flex flex-col">
       {/* ===================== HERO ===================== */}
-      <section className="relative flex flex-col gap-4 xl:gap-2 items-center xl:items-start justify-center px-4 sm:px-6 lg:px-16 w-full h-dvh overflow-hidden">
+      <section className="relative flex flex-col gap-4 lg:gap-2 items-center lg:items-start justify-center px-4 sm:px-6 lg:px-16 w-full h-dvh overflow-hidden">
         <picture className="absolute inset-0 -z-0 theme-hero-media">
           <source
             media="(max-width: 639px)"
@@ -178,14 +178,14 @@ export default function SolutionsPage() {
         {/* Nube brillante celeste */}
         <div className="z-10 absolute top-1/4 left-4 sm:left-16 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[80px] sm:blur-[100px] opacity-20 pointer-events-none animate-float" />
 
-        <h1 className="theme-heading relative z-10 mt-32 xl:mt-4 text-center xl:text-start max-w-[13.5ch] break-words text-4xl font-extrabold leading-[1.02] tracking-normal xs:text-[2.4rem] sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[4rem]">
+        <h1 className="theme-heading text-center lg:text-start relative z-10 mt-32 md:mt-20 lg:mt-4 max-w-[13.5ch] break-words text-4xl font-extrabold leading-[1.02] tracking-normal sm:max-w-[20ch] sm:text-[2.5rem] lg:text-[3.45rem] xl:text-[4rem]">
           Infraestructura y tecnología para operar con precisión.
         </h1>
-        <p className="theme-copy relative px-4 pb-28 xl:pb-0 text-center xl:text-start z-10 xl:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
+        <p className="theme-copy relative px-4 pb-20 md:pb-0 md:text-start text-center z-10 md:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
           Integramos ingeniería, automatización y conectividad para proyectos
           que requieren continuidad operativa real.
         </p>
-        <div className="relative xl:pb-0 pb-2 z-10 xl:mt-4 mt-28 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center w-full sm:w-auto">
+        <div className="relative md:pb-0 md:mt-4 mt-32 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center w-full sm:w-auto">
           <Link
             href="/soluciones#soluciones-principales"
             className="bg-blue-500 text-white flex items-center justify-center gap-2 rounded-3xl py-3 w-full px-5 text-sm sm:w-auto"
@@ -213,11 +213,11 @@ export default function SolutionsPage() {
             Hablar con un asesor
           </Link>
         </div>
-        <div className="relative z-10 xl:mt-4 flex xl:gap-0 gap-2">
+        <div className="relative z-10 md:mt-4 flex md:gap-0 gap-2">
           {capabilitySignals.map((signal) => (
             <span
               key={signal}
-              className="theme-pill flex justify-center items-center rounded-full px-2 py-1 xl:px-2.5 xl:py-1.5 text-center text-[0.48rem] xl:text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em] backdrop-blur-sm"
+              className="theme-pill flex items-center rounded-full px-1 py-1 md:px-2.5 md:py-1.5 text-center text-[0.48rem] md:text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em] backdrop-blur-sm"
             >
               {signal}
             </span>
