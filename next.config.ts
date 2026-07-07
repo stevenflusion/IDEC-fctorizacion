@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   // Permite orígenes locales en desarrollo para evitar el warning de cross‑origin a /_next/*
-  allowedDevOrigins: ['localhost', '127.0.0.1', '172.29.240.1'],
+  allowedDevOrigins: ['localhost', '127.0.0.1', '172.29.240.1', '0.0.0.0'],
   experimental: {
     serverActions: {
       bodySizeLimit: '20mb',

@@ -7,6 +7,7 @@ import SiteLinks from "./SiteLinks";
 import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 import ThemeSelect from "./ThemeSelect";
+import ThemeToggle from "./ThemeToggle";
 
 const homeAnchors = [
   { label: "Soluciones", href: "/soluciones#soluciones-principales" },
@@ -47,7 +48,7 @@ export default function MainNavSite() {
     )?.[1] ?? [];
 
   return (
-    <header className="absolute bg-[#] inset-x-0 top-0 z-50 w-full">
+    <header className="theme-nav fixed inset-x-0 top-0 z-50 w-full">
       <div className="mx-auto flex h-[var(--navbar-height)] max-w-[90rem] items-center justify-between gap-3 px-4 sm:px-6 lg:gap-5 lg:px-8">
         <div className="flex min-w-0 items-center gap-3">
           <Logo />
@@ -74,10 +75,13 @@ export default function MainNavSite() {
           </svg>
         </Link>
 
+        <ThemeToggle />
+
         <div className="flex items-center gap-2 lg:hidden">
           <div className="hidden sm:block">
             <ThemeSelect compact />
           </div>
+          <MobileMenu anchors={anchors} />
         </div>
       </div>
     </header>

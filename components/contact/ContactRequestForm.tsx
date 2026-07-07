@@ -45,15 +45,18 @@ export default function ContactRequestForm() {
   };
 
   const fieldClassName =
-    "h-[2.625rem] w-full rounded-[1rem] border border-white/7 bg-white/[0.04] px-3.5 text-sm placeholder:text-gray-600 text-gray-900 transition-colors focus:border-blue-400/40 focus:bg-white/[0.055] focus:outline-none";
+    "h-[2.625rem] w-full rounded-[1rem] border border-slate-300 bg-white px-3.5 text-sm placeholder:text-slate-400 text-slate-900 transition-colors focus:border-blue-400/60 focus:outline-none";
+
+  const textareaClassName =
+    "w-full rounded-[1rem] border border-slate-300 bg-white px-3.5 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition-colors focus:border-blue-400/60 focus:outline-none";
 
   return (
-    <div className="relative flex justify-between  overflow-hidden rounded-[1.5rem] border border-white/7 bg-[linear-gradient(180deg,rgba(255,255,255,0.045),rgba(255,255,255,0.02))] p-8 gap-8 shadow-[0_18px_44px_rgba(2,6,23,0.16)] backdrop-blur-lg">
+    <div className="relative grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-start overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white p-6 sm:p-8 shadow-[0_18px_44px_rgba(2,6,23,0.08)]">
       <div className="relative">
         <span className="inline-flex text-gray-500 max-w-full items-center rounded-full bg-gray-200 px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
           Solicitud inicial
         </span>
-        <h2 className="font-display mt-2.5 text-3xl font-medium leading-[1.05] tracking-[-0.04em]">
+        <h2 className="font-display mt-2.5 text-[2rem] sm:text-3xl font-medium leading-[1.05] tracking-[-0.04em] text-slate-900">
           Cuéntanos el contexto y te respondemos con el siguiente paso.
         </h2>
         <p className="mt-2 max-w-[30rem] leading-6 text-gray-700">
@@ -63,7 +66,7 @@ export default function ContactRequestForm() {
       </div>
 
       <form
-        className="relative mt-[1.125rem] space-y-3.5"
+        className="relative space-y-3.5"
         onSubmit={handleSubmit}
       >
         <div className="grid gap-4 sm:grid-cols-2">
@@ -122,17 +125,13 @@ export default function ContactRequestForm() {
           <span className="text-xs font-medium text-gray-600">
             Servicio de interés
           </span>
-          <select
-            value={service}
-            onChange={(event) => setService(event.target.value)}
-            className={fieldClassName}
-          >
+<select
+          value={service}
+          onChange={(event) => setService(event.target.value)}
+          className={fieldClassName}
+        >
             {serviceOptions.map((option) => (
-              <option
-                key={option}
-                value={option}
-                className="bg-[#0b1628] text-red-400"
-              >
+              <option key={option} value={option}>
                 {option}
               </option>
             ))}
@@ -146,7 +145,7 @@ export default function ContactRequestForm() {
             onChange={(event) => setMessage(event.target.value)}
             placeholder="Cuéntanos brevemente qué necesitas resolver."
             rows={3}
-            className="w-full rounded-[1rem] border border-white/7 bg-white/[0.04] px-3.5 py-3 text-sm text-white placeholder:text-white/34 transition-colors focus:border-blue-400/40 focus:bg-white/[0.055] focus:outline-none"
+            className={textareaClassName}
           />
         </label>
 

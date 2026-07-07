@@ -3,28 +3,29 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-import img1 from "@/src/galery/1.png";
-import img2 from "@/src/galery/2.png";
-import img3 from "@/src/galery/3.png";
-import img4 from "@/src/galery/4.png";
-import img5 from "@/src/galery/5.png";
-import img6 from "@/src/galery/6.png";
-import img7 from "@/src/galery/7.png";
-import img8 from "@/src/galery/8.png";
-import img9 from "@/src/galery/9.png";
-import img10 from "@/src/galery/10.png";
-import img11 from "@/src/galery/11.png";
-import img12 from "@/src/galery/12.png";
-import img13 from "@/src/galery/13.png";
-import img14 from "@/src/galery/14.png";
-import img15 from "@/src/galery/15.png";
-import img16 from "@/src/galery/16.png";
-import img17 from "@/src/galery/17.png";
-import img18 from "@/src/galery/18.png";
-import img19 from "@/src/galery/19.png";
-import img20 from "@/src/galery/20.png";
+const G = "/galery";
+const img1 = `${G}/1.webp`;
+const img2 = `${G}/2.webp`;
+const img3 = `${G}/3.webp`;
+const img4 = `${G}/4.webp`;
+const img5 = `${G}/5.webp`;
+const img6 = `${G}/6.webp`;
+const img7 = `${G}/7.webp`;
+const img8 = `${G}/8.webp`;
+const img9 = `${G}/9.webp`;
+const img10 = `${G}/10.webp`;
+const img11 = `${G}/11.webp`;
+const img12 = `${G}/12.webp`;
+const img13 = `${G}/13.webp`;
+const img14 = `${G}/14.webp`;
+const img15 = `${G}/15.webp`;
+const img16 = `${G}/16.webp`;
+const img17 = `${G}/17.webp`;
+const img18 = `${G}/18.webp`;
+const img19 = `${G}/19.webp`;
+const img20 = `${G}/20.webp`;
 
-type Photo = { src: typeof img1; alt: string };
+type Photo = { src: string; alt: string };
 
 /* ---------- Carrusel con crossfade ---------- */
 function Carousel({
@@ -139,11 +140,13 @@ function CaptionPhoto({
   title,
   subtitle,
   className = "",
+  priority = false,
 }: {
   photo: Photo;
   title: string;
   subtitle?: string;
   className?: string;
+  priority?: boolean;
 }) {
   return (
     <Tile className={`group/cap ${className}`}>
@@ -151,6 +154,7 @@ function CaptionPhoto({
         src={photo.src}
         alt={photo.alt}
         fill
+        priority={priority}
         sizes="(max-width: 768px) 100vw, 50vw"
         className="object-cover transition-transform duration-[1100ms] ease-out group-hover/cap:scale-[1.08]"
       />
@@ -180,7 +184,7 @@ function TextTile({
 }) {
   return (
     <Tile
-      className={`flex flex-col justify-between bg-gradient-to-br from-[#1193d4] to-[#0b5c7e] p-6 text-white ${className}`}
+      className={`col-span-2 sm:col-span-1 flex flex-col justify-between bg-gradient-to-br from-[#1193d4] to-[#0b5c7e] p-6 text-white ${className}`}
     >
       {kicker && (
         <span className="text-[0.65rem] font-semibold uppercase tracking-[0.25em] text-white/70">
@@ -243,6 +247,7 @@ export default function GaleryPage() {
           title="Ingeniería aplicada"
           subtitle="Proyectos ejecutados en campo."
           className="col-span-2 row-span-2 lg:col-span-3"
+          priority
         />
         <Carousel
           photos={[

@@ -17,10 +17,10 @@ export default function Logo() {
         />
       </span>
       <span className="flex flex-col leading-none">
-        <span className="font-display text-[1.02rem] font-extrabold tracking-[0.14em] text-gray-900 transition-colors duration-300 group-hover:text-blue-200 sm:text-[1.08rem]">
+        <span className="theme-logo-brand font-display text-[1.02rem] font-extrabold tracking-[0.14em] transition-colors duration-300 group-hover:text-blue-200 sm:text-[1.08rem]">
           IDEC
         </span>
-        <span className="mt-1 text-[0.62rem] font-medium uppercase tracking-[0.2em] text-gray-700 sm:text-[0.64rem]">
+        <span className="theme-logo-sub mt-1 text-[0.62rem] font-medium uppercase tracking-[0.2em] sm:text-[0.64rem]">
           Soluciones integrales
         </span>
       </span>

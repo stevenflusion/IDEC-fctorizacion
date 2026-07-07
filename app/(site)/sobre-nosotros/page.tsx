@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   IconBuilding,
@@ -6,23 +5,9 @@ import {
   IconStar,
   IconTarget,
 } from "@/components/icons";
-import heroBg from "@/src/bg/herobackground_sobre_nosotros.png";
 
-const heroFacts = [
-  {
-    label: "Coordinación interna",
-    detail: "Especialidades alineadas bajo una sola lectura técnica.",
-  },
-  {
-    label: "Capacidad de ejecución",
-    detail: "Obra, energía, conectividad y software dentro del mismo sistema.",
-  },
-  {
-    label: "Visión operativa",
-    detail:
-      "Decisiones técnicas pensadas para sostener continuidad y crecimiento.",
-  },
-];
+const heroDesktopSrc = "/bg/hero-sobre-desktop.webp";
+const heroMobileSrc = "/bg/hero-sobre-mobile.webp";
 
 const pillars = [
   {
@@ -144,25 +129,49 @@ const capabilitySignals = [
 export default function AboutPage() {
   return (
     <div className="flex flex-col">
-      <section
-        className="relative flex flex-col gap-4 items-start justify-center px-16 w-full h-dvh bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: `url(${heroBg.src})` }}
-      >
-        {/* Nube brillante celeste */}
-        <div className="z-10 absolute top-1/4 left-16 w-[420px] h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[100px] opacity-20 pointer-events-none animate-float" />
+      {/* ===================== HERO ===================== */}
+      <section className="relative flex flex-col gap-4 xl:gap-2 items-center xl:items-start justify-center px-4 sm:px-6 lg:px-16 w-full h-dvh overflow-hidden">
+        <picture className="absolute inset-0 -z-0 theme-hero-media">
+          <source
+            media="(max-width: 639px)"
+            srcSet={heroMobileSrc}
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet={heroDesktopSrc}
+            type="image/webp"
+          />
+          <img
+            src={heroDesktopSrc}
+            alt="Obras reales con criterio técnico y ejecución en campo"
+            className="h-full w-full object-cover object-center"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
 
-        <h1 className="relative z-10 mt-4 max-w-[13.5ch] break-words text-[2.15rem] font-extrabold leading-[0.98] tracking-normal sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[4rem]">
+        {/* Layer de legibilidad */}
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-0 theme-hero-overlay bg-white/35 sm:bg-gradient-to-r sm:from-white/80 sm:via-white/40 sm:to-transparent"
+        />
+
+        {/* Nube brillante celeste */}
+        <div className="z-10 absolute top-1/4 left-4 sm:left-16 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[80px] sm:blur-[100px] opacity-20 pointer-events-none animate-float" />
+
+        <h1 className="theme-heading relative z-10 mt-32 xl:mt-4 text-center xl:text-start max-w-[13.5ch] break-words text-4xl font-extrabold leading-[1.02] tracking-normal xs:text-[2.4rem] sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[4rem]">
           Obras reales con criterio técnico y ejecución en campo.
         </h1>
-        <p className="relative z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6  sm:text-[1rem]">
+        <p className="theme-copy relative px-4 pb-20 xl:pb-0 text-center xl:text-start z-10 xl:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
           Seleccionamos proyectos recientes que muestran cómo IDEC coordina
           ingeniería civil, eléctrica y soporte técnico para resolver
           necesidades concretas con seguridad, orden y continuidad operativa.
         </p>
-        <div className="relative z-10 mt-4 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
+        <div className="relative z-10 xl:mt-4 mt-28 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center w-full sm:w-auto">
           <Link
             href="/soluciones#soluciones-principales"
-            className="bg-white flex items-center gap-2 rounded-3xl py-3 w-full px-5 text-sm  sm:w-auto"
+            className="bg-blue-500 text-white flex items-center justify-center gap-2 rounded-3xl py-3 w-full px-5 text-sm sm:w-auto"
           >
             Conocer IDEC
             <svg
@@ -182,16 +191,16 @@ export default function AboutPage() {
           </Link>
           <Link
             href="/contact"
-            className="border border-gray-400 shadow rounded-3xl py-2 w-full px-4 text-sm sm:w-auto"
+            className="bg-white text-slate-700 border border-slate-300 flex items-center justify-center rounded-3xl py-2.5 w-full px-4 text-sm sm:w-auto text-center"
           >
             Ver soluciones
           </Link>
         </div>
-        <div className="relative z-10 mt-4 flex flex-wrap gap-2">
+        <div className="relative z-10 xl:mt-4 gap-2 grid grid-cols-3">
           {capabilitySignals.map((signal) => (
             <span
               key={signal}
-              className="inline-flex text-gray-600 max-w-full items-center rounded-full bg-gray-300/50 border shadow px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]"
+              className="theme-pill flex items-center rounded-full border px-1 py-1 xl:px-2.5 xl:py-1.5 text-center text-[0.48rem] xl:text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]"
             >
               {signal}
             </span>
@@ -199,57 +208,57 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ===================== HISTORIA Y CRITERIO ===================== */}
       <section
         id="sobre-historia"
-        className="relative overflow-hidden px-4 py-14 scroll-mt-24 md:py-20"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-14 scroll-mt-24 md:py-20"
       >
-        <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
+        <div className="relative mx-auto w-full max-w-[1520px]">
           <SectionHeader
             badge="Historia y criterio"
             title="Una empresa que combina oficio técnico y lectura operativa."
             description="Nuestro crecimiento se construyó conectando especialidades, entendiendo el campo y tomando decisiones con una visión más amplia que la del contratista tradicional."
-            tone="light"
           />
-          <div className="">
-            <article className="grid gap-8 md:grid-cols-3">
+          <div>
+            <article className="grid gap-5 sm:gap-8 grid-cols-1 md:grid-cols-3">
               {storyBlocks.map((block) => (
                 <div
                   key={block.title}
-                  className="rounded-3xl shadow border p-6"
+                  className="theme-card rounded-3xl shadow border p-6"
                 >
-                  <h3 className="font-display text-2xl font-medium tracking-[-0.03em] text-gray-900">
+                  <h3 className="theme-heading font-display text-2xl font-medium tracking-[-0.03em]">
                     {block.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-7 text-gray-600">
+                  <p className="theme-copy mt-3 text-sm leading-7">
                     {block.detail}
                   </p>
                 </div>
               ))}
             </article>
-            <aside className="mt-8 rounded-3xl shadow border p-6">
+            <aside className="theme-card mt-8 rounded-3xl shadow border p-6">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#081120] text-white shadow-[0_14px_34px_rgba(8,17,32,0.16)]">
                 <IconBuilding size={26} />
               </div>
-              <h3 className="font-display mt-6 text-[1.35rem] font-bold tracking-[-0.03em] text-[#081120]">
+              <h3 className="theme-heading font-display mt-6 text-[1.35rem] font-bold tracking-[-0.03em]">
                 Lo que nos diferencia
               </h3>
-              <ul className="mt-5 space-y-3 text-sm text-slate-600">
+              <ul className="theme-copy mt-5 space-y-3 text-sm">
                 <li className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gray-700" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
                   <p>
                     Coordinamos varias disciplinas sin perder una sola
                     conversación técnica.
                   </p>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gray-700" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
                   <p>
                     Leemos el proyecto desde la operación, no solo desde la
                     instalación.
                   </p>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 rounded-full bg-gray-700" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
                   <p>
                     Acompañamos la continuidad del resultado más allá de la
                     entrega.
@@ -261,78 +270,76 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ===================== PILARES IDEC ===================== */}
       <section
         id="sobre-pilares"
-        className="relative overflow-hidden px-4 py-16 scroll-mt-24 md:py-22"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-16 scroll-mt-24 md:py-22"
       >
-        <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
+        <div className="relative mx-auto w-full max-w-[1520px]">
           <SectionHeader
             badge="Pilares IDEC"
             title="Una identidad construida sobre misión, visión y ejecución."
             description="Nuestra forma de pensar se traduce en decisiones, prioridades y relaciones de largo plazo con cada cliente."
-            tone="light"
           />
-          <div className="grid gap-5 xl:grid-cols-3">
-            {pillars.map((pillar) => (
-              <article
-                key={pillar.title}
-                className="relative overflow-hidden rounded-3xl border shadow"
-              >
-                <div className="relative flex h-full flex-col gap-4 p-7">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/14 text-white">
-                    <pillar.icon size={26} />
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {pillars.map((pillar, i) => {
+              const isLast = i === pillars.length - 1;
+              return (
+                <article
+                  key={pillar.title}
+                  className={`theme-card-soft relative overflow-hidden rounded-3xl border shadow ${isLast ? "sm:col-span-2 lg:col-span-1" : ""}`}
+                >
+                  <div className="relative flex h-full flex-col gap-4 p-6 sm:p-7">
+                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#081120] text-white">
+                      <pillar.icon size={26} />
+                    </div>
+                    <h3 className="theme-heading relative z-10 max-w-[16ch] break-words text-[1.8rem] font-extrabold leading-[1.02] tracking-normal sm:text-[2.4rem] lg:text-[2.45rem] xl:text-[3rem]">
+                      {pillar.title}
+                    </h3>
+                    <p className="theme-copy leading-7">{pillar.description}</p>
+                    <ul className="theme-copy mt-2 space-y-2.5 text-sm">
+                      {pillar.points.map((point) => (
+                        <li key={point} className="flex items-start gap-2.5">
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-blue-500" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="relative z-10 max-w-[13.5ch] break-words text-[2.15rem] font-extrabold leading-[0.98] tracking-normal sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[3rem]">
-                    {pillar.title}
-                  </h3>
-                  <p
-                    className="max-w-[39rem]
-                   leading-7 text-gray-600"
-                  >
-                    {pillar.description}
-                  </p>
-                  <ul className="mt-2 space-y-2.5 text-sm text-white/92">
-                    {pillar.points.map((point) => (
-                      <li key={point} className="flex items-start gap-2.5">
-                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-gray-700" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
 
+      {/* ===================== TRAYECTORIA + LABORATORIO ===================== */}
       <section
         id="sobre-trayectoria"
-        className="relative overflow-hidden px-4 py-14 scroll-mt-24 md:py-20"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-14 scroll-mt-24 md:py-20"
       >
-        <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
+        <div className="relative mx-auto w-full max-w-[1520px]">
           <div className="grid gap-8">
             <div>
               <SectionHeader
                 badge="Trayectoria"
                 title="Evolucionamos sumando capacidad sin perder criterio."
                 description="Cada etapa nos permitió integrar una nueva capa de especialidad para responder con más profundidad técnica."
-                tone="light"
               />
-              <div className="space-y-5 border-l border-blue-100 pl-6">
+              <div className="space-y-5 border-l border-blue-500/30 pl-6">
                 {journey.map((item) => (
                   <article
                     key={`${item.year}-${item.title}`}
                     className="relative pl-4"
                   >
                     <span className="absolute -left-[29px] h-4 w-4 rounded-full border-4 border-[#f3f6fb] bg-blue-500 shadow-[0_0_0_1px_rgba(59,130,246,0.12)]" />
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-blue-700">
+                    <p className="theme-eyebrow text-[0.68rem] font-semibold uppercase tracking-[0.2em]">
                       {item.year}
                     </p>
-                    <h3 className="font-display mt-2 text-[1.15rem] font-bold tracking-[-0.03em] text-[#081120]">
+                    <h3 className="theme-heading font-display mt-2 text-[1.15rem] font-bold tracking-[-0.03em]">
                       {item.title}
                     </h3>
-                    <p className="text-[0.93rem] leading-7 text-gray-500">
+                    <p className="theme-copy text-[0.93rem] leading-7">
                       {item.detail}
                     </p>
                   </article>
@@ -342,24 +349,23 @@ export default function AboutPage() {
 
             <aside
               id="sobre-laboratorio"
-              className="rounded-[1.85rem] border shadow p-8 mt-8"
+              className="theme-card rounded-[1.85rem] border shadow p-6 sm:p-8 mt-8"
             >
-              <span className="inline-flex text-gray-600 max-w-full items-center rounded-full bg-gray-300/50 border shadow px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
-                {" "}
-                Laboratorio IDEC{" "}
+              <span className="theme-pill inline-flex border items-center rounded-full px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
+                Laboratorio IDEC
               </span>
-              <h3 className="font-display mt-4 text-[1.5rem] font-bold tracking-[-0.03em] text-[#081120]">
+              <h3 className="theme-heading font-display mt-4 text-[1.5rem] font-bold tracking-[-0.03em]">
                 Validamos antes de desplegar.
               </h3>
-              <p className="mt-3 text-[0.95rem] leading-7 text-slate-600">
+              <p className="theme-copy mt-3 text-[0.95rem] leading-7">
                 Probamos materiales, conectividad y automatización en escenarios
                 reales para reducir riesgo, ajustar decisiones y ganar certeza
                 antes de ejecutar.
               </p>
-              <ul className="mt-6 space-y-3 text-sm text-slate-600">
+              <ul className="theme-copy mt-6 space-y-3 text-sm">
                 {labHighlights.map((highlight) => (
                   <li key={highlight} className="flex items-center gap-3">
-                    <span className="h-1.5 w-1.5 rounded-full bg-gray-700 shadow-[0_0_12px_rgba(59,130,246,0.3)]" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-blue-500 shadow-[0_0_12px_rgba(59,130,246,0.3)]" />
                     <span>{highlight}</span>
                   </li>
                 ))}
@@ -369,54 +375,54 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ===================== TESTIMONIOS + CTA ===================== */}
       <section
         id="sobre-testimonios"
-        className="relative overflow-hidden px-4 py-16 scroll-mt-24 md:py-22"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-16 scroll-mt-24 md:py-22"
       >
-        <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
+        <div className="relative mx-auto w-full max-w-[1520px]">
           <SectionHeader
             badge="Experiencia IDEC"
             title="Relaciones que se sostienen por claridad y resultados."
             description=""
-            tone="light"
           />
-          <div className="grid gap-5 md:grid-cols-2">
+          <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
             {testimonials.map((item) => (
               <article
                 key={item.author}
-                className="rounded-3xl border p-7 shadow"
+                className="theme-card rounded-3xl border p-6 sm:p-7 shadow"
               >
-                <p className="leading-8 text-gray-700">
+                <p className="theme-copy leading-8">
                   &ldquo;{item.quote}&rdquo;
                 </p>
-                <p className="mt-6 text-xs font-medium text-blue-100/74">
+                <p className="theme-eyebrow mt-6 text-xs font-medium">
                   {item.author}
                 </p>
               </article>
             ))}
           </div>
 
-          <div className="mt-10 rounded-3xl border p-7 shadow">
-            <span className="inline-flex text-gray-600 max-w-full items-center rounded-full bg-gray-300/50 border shadow px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
+          <div className="theme-card-soft mt-10 rounded-3xl border p-6 sm:p-7 shadow">
+            <span className="theme-pill inline-flex border items-center rounded-full px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
               Siguiente conversación
             </span>
-            <h2 className="font-display mt-4 max-w-[16ch] text-[clamp(2rem,3.6vw,3.1rem)] font-extrabold leading-[0.98] tracking-[-0.04em]">
+            <h2 className="theme-heading font-display mt-4 max-w-[16ch] text-[clamp(2rem,3.6vw,3.1rem)] font-extrabold leading-[1.02] tracking-[-0.04em]">
               Conversemos sobre el proyecto que necesitas coordinar mejor.
             </h2>
-            <p className="mt-4 max-w-[38rem] leading-7 text-gray-600">
+            <p className="theme-copy mt-4 max-w-[38rem] leading-7">
               Si tienes planos, alcances, ideas o frentes abiertos, te ayudamos
               a ordenarlos con una lectura técnica clara y accionable.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row w-full sm:w-auto">
               <Link
                 href="/contact"
-                className="bg-[#2560e2] rounded-3xl text-white flex items-center h-12 px-6 text-sm"
+                className="bg-blue-500 rounded-3xl text-white flex items-center justify-center h-12 px-6 text-sm w-full sm:w-auto"
               >
                 <span>Hablar con IDEC</span>
               </Link>
               <Link
                 href="/soluciones"
-                className="h-12 rounded-3xl flex items-center border px-6 text-sm"
+                className="bg-white text-slate-700 border border-slate-300 h-12 rounded-3xl flex items-center justify-center px-6 w-full text-sm sm:w-auto"
               >
                 <span>Revisar soluciones</span>
               </Link>
@@ -432,29 +438,22 @@ type SectionHeaderProps = {
   badge: string;
   title: string;
   description: string;
-  tone: "dark" | "light";
 };
 
-function SectionHeader({
-  badge,
-  title,
-  description,
-  tone,
-}: SectionHeaderProps) {
+function SectionHeader({ badge, title, description }: SectionHeaderProps) {
   return (
     <div className="mb-10 max-w-[46rem]">
-      <span
-        key={badge}
-        className="inline-flex text-gray-600 max-w-full items-center rounded-full bg-gray-300/50 border shadow px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]"
-      >
+      <span className="theme-pill inline-flex border items-center rounded-full px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
         {badge}
       </span>
-      <h1 className="relative z-10 mt-4 max-w-[13.5ch] break-words text-[2.15rem] font-extrabold leading-[0.98] tracking-normal sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[3.5rem]">
+      <h2 className="theme-heading relative z-10 mt-4 max-w-[16ch] break-words text-[2rem] font-extrabold leading-[1.02] tracking-normal sm:text-[3rem] lg:text-[3.45rem] xl:text-[3.5rem]">
         {title}
-      </h1>
-      <p className="relative text-gray-500 z-10 mt-5 max-w-[32rem] leading-6">
-        {description}
-      </p>
+      </h2>
+      {description ? (
+        <p className="theme-copy relative z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
+          {description}
+        </p>
+      ) : null}
     </div>
   );
 }

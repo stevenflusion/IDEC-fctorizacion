@@ -8,7 +8,9 @@ import {
   IconMechanical,
   IconRouter,
 } from "@/components/icons";
-import heroBg from "@/src/bg/herobackground_finanzas.png";
+
+const heroDesktopSrc = "/bg/hero-soluciones-desktop.webp";
+const heroMobileSrc = "/bg/hero-soluciones-mobile.webp";
 
 const coreSolutions = [
   {
@@ -145,24 +147,48 @@ const capabilitySignals = [
 export default function SolutionsPage() {
   return (
     <div className="flex flex-col">
-      <section
-        className="relative flex flex-col gap-4 items-start justify-center px-16 w-full h-dvh bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: `url(${heroBg.src})` }}
-      >
-        {/* Nube brillante celeste */}
-        <div className="z-10 absolute top-1/4 left-16 w-[420px] h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[100px] opacity-20 pointer-events-none animate-float" />
+      {/* ===================== HERO ===================== */}
+      <section className="relative flex flex-col gap-4 xl:gap-2 items-center xl:items-start justify-center px-4 sm:px-6 lg:px-16 w-full h-dvh overflow-hidden">
+        <picture className="absolute inset-0 -z-0 theme-hero-media">
+          <source
+            media="(max-width: 639px)"
+            srcSet={heroMobileSrc}
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 640px)"
+            srcSet={heroDesktopSrc}
+            type="image/webp"
+          />
+          <img
+            src={heroDesktopSrc}
+            alt="Infraestructura y tecnología para operar con precisión"
+            className="h-full w-full object-cover object-center"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
 
-        <h1 className="relative z-10 mt-4 max-w-[13.5ch] break-words text-[2.15rem] font-extrabold leading-[0.98] tracking-normal sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[4rem]">
+        {/* Layer de legibilidad */}
+        <div
+          aria-hidden
+          className="absolute inset-0 -z-0 theme-hero-overlay bg-white/35 sm:bg-gradient-to-r sm:from-white/80 sm:via-white/40 sm:to-transparent"
+        />
+
+        {/* Nube brillante celeste */}
+        <div className="z-10 absolute top-1/4 left-4 sm:left-16 w-[260px] h-[260px] sm:w-[420px] sm:h-[420px] rounded-full bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 blur-[80px] sm:blur-[100px] opacity-20 pointer-events-none animate-float" />
+
+        <h1 className="theme-heading relative z-10 mt-32 xl:mt-4 text-center xl:text-start max-w-[13.5ch] break-words text-4xl font-extrabold leading-[1.02] tracking-normal xs:text-[2.4rem] sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[4rem]">
           Infraestructura y tecnología para operar con precisión.
         </h1>
-        <p className="relative z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6  sm:text-[1rem]">
+        <p className="theme-copy relative px-4 pb-28 xl:pb-0 text-center xl:text-start z-10 xl:mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
           Integramos ingeniería, automatización y conectividad para proyectos
           que requieren continuidad operativa real.
         </p>
-        <div className="relative z-10 mt-4 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
+        <div className="relative xl:pb-0 pb-2 z-10 xl:mt-4 mt-28 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center w-full sm:w-auto">
           <Link
             href="/soluciones#soluciones-principales"
-            className="bg-white flex items-center gap-2 rounded-3xl py-3 w-full px-5 text-sm  sm:w-auto"
+            className="bg-blue-500 text-white flex items-center justify-center gap-2 rounded-3xl py-3 w-full px-5 text-sm sm:w-auto"
           >
             Explorar soluciones
             <svg
@@ -182,16 +208,16 @@ export default function SolutionsPage() {
           </Link>
           <Link
             href="/contact"
-            className="border border-gray-400 shadow rounded-3xl py-2 w-full px-4 text-sm sm:w-auto"
+            className="bg-white text-slate-700 border border-slate-300 flex items-center justify-center rounded-3xl py-2.5 w-full px-4 text-sm sm:w-auto text-center"
           >
             Hablar con un asesor
           </Link>
         </div>
-        <div className="relative z-10 mt-4 flex flex-wrap gap-2">
+        <div className="relative z-10 xl:mt-4 flex xl:gap-0 gap-2">
           {capabilitySignals.map((signal) => (
             <span
               key={signal}
-              className="inline-flex text-black/70 max-w-full items-center rounded-full bg-white/20 px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]"
+              className="theme-pill flex justify-center items-center rounded-full px-2 py-1 xl:px-2.5 xl:py-1.5 text-center text-[0.48rem] xl:text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em] backdrop-blur-sm"
             >
               {signal}
             </span>
@@ -199,72 +225,75 @@ export default function SolutionsPage() {
         </div>
       </section>
 
+      {/* ===================== NÚCLEO TÉCNICO ===================== */}
       <section
         id="soluciones-principales"
-        className="relative overflow-hidden px-4 py-14 scroll-mt-24 md:py-20"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-14 scroll-mt-24 md:py-20"
       >
-        <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
+        <div className="relative mx-auto w-full max-w-[1520px]">
           <SectionHeader
             badge="Núcleo técnico"
             title="Tres capacidades para proyectos que no pueden improvisarse."
             description=""
-            tone="light"
           />
-          <div className="grid gap-5 xl:grid-cols-3">
-            {coreSolutions.map((solution) => (
-              <article
-                key={solution.title}
-                className="group relative overflow-hidden rounded-[1.75rem] border border-gray-300 shadow p-6"
-              >
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent" />
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {coreSolutions.map((solution, i) => {
+              const isLast = i === coreSolutions.length - 1;
+              return (
+                <article
+                  key={solution.title}
+                  className={`theme-card group relative overflow-hidden rounded-[1.75rem] border shadow p-6 ${isLast ? "sm:col-span-2 lg:col-span-1" : ""}`}
+                >
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent to-transparent" />
 
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#081120] text-white shadow-[0_14px_34px_rgba(8,17,32,0.18)]">
-                  <solution.icon size={26} />
-                </div>
-                <h3 className="font-display mt-6 text-[1.38rem] font-bold tracking-[-0.03em] text-[#081120]">
-                  {solution.title}
-                </h3>
-                <p className="mt-3 text-[0.95rem] leading-7 text-gray-600">
-                  {solution.description}
-                </p>
-                <ul className="mt-5 space-y-2.5 text-sm text-slate-600">
-                  {solution.points.map((point) => (
-                    <li key={point} className="flex items-start gap-2.5">
-                      <span className="mt-2 h-1 w-1 rounded-full bg-black/80" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#081120] text-white shadow-[0_14px_34px_rgba(8,17,32,0.18)]">
+                    <solution.icon size={26} />
+                  </div>
+                  <h3 className="theme-heading font-display mt-6 text-[1.38rem] font-bold tracking-[-0.03em]">
+                    {solution.title}
+                  </h3>
+                  <p className="theme-copy mt-3 text-[0.95rem] leading-7">
+                    {solution.description}
+                  </p>
+                  <ul className="theme-copy mt-5 space-y-2.5 text-sm">
+                    {solution.points.map((point) => (
+                      <li key={point} className="flex items-start gap-2.5">
+                        <span className="mt-2 h-1 w-1 rounded-full bg-blue-500" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
 
+      {/* ===================== CAPAS COMPLEMENTARIAS ===================== */}
       <section
         id="soluciones-capas"
-        className="relative overflow-hidden  px-4 py-16 scroll-mt-24 text-white md:py-22"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-16 scroll-mt-24 text-white md:py-22"
       >
-        <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
+        <div className="relative mx-auto w-full max-w-[1520px]">
           <SectionHeader
             badge="Capas complementarias"
             title="Tecnología aplicada para conectar y acelerar la operación."
             description="Telecomunicaciones, plataformas y automatización que amplifican cada despliegue físico con datos, visibilidad y control."
-            tone="light"
           />
-          <div className="grid gap-5 grid-cols-2">
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
             {complementaryLayers.map((layer) => (
               <article
                 key={layer.title}
-                className="group relative overflow-hidden rounded-[1.75rem] border  shadow"
+                className="theme-card group relative overflow-hidden rounded-[1.75rem] border shadow"
               >
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-48 sm:h-56 overflow-hidden">
                   <Image
                     src={layer.image}
                     alt={layer.title}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    sizes="(min-width:1280px) 33vw, (min-width:768px) 50vw, 100vw"
+                    sizes="(min-width:640px) 50vw, 100vw"
                   />
 
                   <div className="absolute left-5 top-5 inline-flex rounded-full border border-white/12 bg-[#081120]/72 px-3 py-1.5 text-[0.61rem] font-semibold uppercase tracking-[0.16em] text-blue-100/92 backdrop-blur-md">
@@ -274,11 +303,11 @@ export default function SolutionsPage() {
                     <layer.icon size={24} />
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-display text-gray-900 text-[1.36rem] font-bold tracking-[-0.03em]">
+                <div className="p-5 sm:p-6">
+                  <h3 className="theme-heading font-display text-[1.36rem] font-bold tracking-[-0.03em]">
                     {layer.title}
                   </h3>
-                  <p className="mt-3 text-[0.95rem] text-gray-600 leading-7">
+                  <p className="theme-copy mt-3 text-[0.95rem] leading-7">
                     {layer.description}
                   </p>
                 </div>
@@ -288,32 +317,32 @@ export default function SolutionsPage() {
         </div>
       </section>
 
+      {/* ===================== MODELO DE TRABAJO ===================== */}
       <section
         id="soluciones-modelo"
-        className="relative overflow-hidden px-4 py-14 scroll-mt-24 md:py-20"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-14 scroll-mt-24 md:py-20"
       >
-        <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
+        <div className="relative mx-auto w-full max-w-[1520px]">
           <SectionHeader
             badge="Modelo de trabajo"
             title="Una metodología clara para reducir tiempos de entrega y tomar mejores decisiones."
             description="Coordinamos alcance, especialidades y validación continua para que la ejecución avance con control desde el primer día."
-            tone="light"
           />
-          <div className="grid gap-5 grid-cols-2">
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2">
             {deliveryModel.map((step) => (
               <article
                 key={step.title}
-                className="relative overflow-hidden rounded-[1.55rem] border border-white/60 bg-white/50 p-6 shadow-[0_20px_44px_rgba(15,23,42,0.07)] backdrop-blur-xl"
+                className="theme-card-soft relative overflow-hidden rounded-[1.55rem] border p-6 shadow-[0_20px_44px_rgba(15,23,42,0.07)]"
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400/70 to-transparent" />
-                <span className="inline-flex rounded-full border border-blue-200/80 bg-blue-50/70 px-3 py-1.5 text-[0.61rem] font-semibold uppercase tracking-[0.18em] text-blue-700">
+                <span className="theme-eyebrow-pill inline-flex rounded-full border px-3 py-1.5 text-[0.61rem] font-semibold uppercase tracking-[0.18em]">
                   {step.badge}
                 </span>
                 <div className="mt-6 h-px w-14 bg-gradient-to-r from-blue-500/80 to-transparent" />
-                <h3 className="font-display mt-5 text-[1.22rem] font-bold tracking-[-0.03em] text-[#081120]">
+                <h3 className="theme-heading font-display mt-5 text-[1.22rem] font-bold tracking-[-0.03em]">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-[0.93rem] leading-7 text-slate-600">
+                <p className="theme-copy mt-3 text-[0.93rem] leading-7">
                   {step.detail}
                 </p>
               </article>
@@ -322,22 +351,22 @@ export default function SolutionsPage() {
         </div>
       </section>
 
+      {/* ===================== CASOS RECIENTES ===================== */}
       <section
         id="soluciones-casos"
-        className="relative overflow-hidden px-4 py-16 scroll-mt-24 text-white md:py-24"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-16 scroll-mt-24 md:py-24"
       >
-        <div className="relative mx-auto w-full max-w-[1520px] px-[clamp(32px,5vw,96px)]">
+        <div className="relative mx-auto w-full max-w-[1520px]">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
             <div>
               <SectionHeader
                 badge="Casos recientes"
                 title="Resultados que se sienten en la operación."
                 description="Compartimos avances, indicadores y decisiones con claridad para que cada proyecto sostenga continuidad, aprendizaje y confianza."
-                tone="dark"
               />
               <Link
                 href="#soluciones-diagnostico"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300 transition-colors hover:text-gray-900"
+                className="theme-eyebrow inline-flex items-center gap-2 text-sm font-semibold transition-colors hover:text-blue-300"
               >
                 Solicitar una propuesta
                 <span aria-hidden="true">→</span>
@@ -347,15 +376,15 @@ export default function SolutionsPage() {
               {caseStudies.map((project) => (
                 <article
                   key={project.name}
-                  className="rounded-[1.45rem] border shadow p-6 "
+                  className="theme-card rounded-[1.45rem] border shadow p-6"
                 >
-                  <span className="inline-flex border border-black/10 shadow text-black/70 items-center rounded-full bg-white/40 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
+                  <span className="theme-pill inline-flex border items-center rounded-full px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
                     {project.scope}
                   </span>
-                  <h3 className="relative text-gray-900 z-10 mt-4 max-w-[13.5ch] break-words text-[2.15rem] font-extrabold leading-[0.98] tracking-normal sm:max-w-[16ch] sm:text-[3rem] lg:text-[2.45rem] xl:text-[2rem]">
+                  <h3 className="theme-heading relative z-10 mt-4 max-w-[13.5ch] break-words text-[1.8rem] font-extrabold leading-[1.02] tracking-normal sm:max-w-[16ch] sm:text-[2.4rem] lg:text-[2.45rem] xl:text-[2rem]">
                     {project.name}
                   </h3>
-                  <p className="relative text-gray-600 z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6  sm:text-[1rem]">
+                  <p className="theme-copy relative z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
                     {project.impact}
                   </p>
                 </article>
@@ -365,19 +394,20 @@ export default function SolutionsPage() {
         </div>
       </section>
 
+      {/* ===================== DIAGNÓSTICO ===================== */}
       <section
         id="soluciones-diagnostico"
-        className="relative overflow-hidden px-4 py-14 scroll-mt-24 md:py-20"
+        className="relative overflow-hidden px-4 sm:px-6 lg:px-16 py-14 scroll-mt-24 md:py-20"
       >
-        <div className="relative mx-auto w-full max-w-[1240px] px-[clamp(32px,5vw,96px)]">
-          <div className="rounded-[2rem] border bg-gray-200 p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl md:p-10">
-            <span className="inline-flex border border-black/10 shadow text-black/70 items-center rounded-full bg-white/40 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
+        <div className="relative mx-auto w-full max-w-[1240px]">
+          <div className="theme-card-soft rounded-[2rem] border p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)] sm:p-8 md:p-10">
+            <span className="theme-pill inline-flex border items-center rounded-full px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
               Proximo paso
             </span>
-            <h1 className="relative z-10 mt-4 max-w-[13.5ch] break-words text-[2.15rem] font-extrabold leading-[0.98] tracking-normal sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[3.5rem]">
+            <h2 className="theme-heading relative z-10 mt-4 max-w-[16ch] break-words text-[2rem] font-extrabold leading-[1.02] tracking-normal sm:text-[3rem] lg:text-[3.45rem] xl:text-[3.5rem]">
               Agendemos un diagnóstico técnico sin costo.
-            </h1>
-            <p className="relative text-gray-600 z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6  sm:text-[1rem]">
+            </h2>
+            <p className="theme-copy relative z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
               Cuéntanos tu reto y te ayudaremos a priorizar alcance,
               dependencias y decisiones para avanzar con una base técnica
               sólida.
@@ -407,7 +437,7 @@ export default function SolutionsPage() {
               </Link>
               <Link
                 href="/proyectos"
-                className="btn-secondary min-h-[48px] px-6 text-sm !border-slate-300 !bg-slate-900/0 !text-slate-700 hover:!bg-slate-900/5"
+                className="btn-secondary min-h-[48px] px-6 text-sm"
               >
                 Ver proyectos relacionados
               </Link>
@@ -423,26 +453,22 @@ type SectionHeaderProps = {
   badge: string;
   title: string;
   description: string;
-  tone: "dark" | "light";
 };
 
-function SectionHeader({
-  badge,
-  title,
-  description,
-  tone,
-}: SectionHeaderProps) {
+function SectionHeader({ badge, title, description }: SectionHeaderProps) {
   return (
     <div className="mb-10 max-w-[46rem]">
-      <span className="inline-flex border border-black/10 shadow text-black/70 items-center rounded-full bg-white/40 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
+      <span className="theme-pill inline-flex border items-center rounded-full px-2.5 py-1.5 text-center text-[0.58rem] font-medium uppercase leading-4 tracking-[0.08em] sm:px-3 sm:tracking-[0.1em]">
         {badge}
       </span>
-      <h1 className="relative text-gray-900 z-10 mt-4 max-w-[13.5ch] break-words text-[2.15rem] font-extrabold leading-[0.98] tracking-normal sm:max-w-[16ch] sm:text-[3rem] lg:text-[3.45rem] xl:text-[3.5rem]">
+      <h2 className="theme-heading relative z-10 mt-4 max-w-[16ch] break-words text-[2rem] font-extrabold leading-[1.02] tracking-normal sm:text-[3rem] lg:text-[3.45rem] xl:text-[3.5rem]">
         {title}
-      </h1>
-      <p className="relative text-gray-500 z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6  sm:text-[1rem]">
-        {description}
-      </p>
+      </h2>
+      {description ? (
+        <p className="theme-copy relative z-10 mt-3 max-w-[32rem] text-[0.94rem] leading-6 sm:text-[1rem]">
+          {description}
+        </p>
+      ) : null}
     </div>
   );
 }
